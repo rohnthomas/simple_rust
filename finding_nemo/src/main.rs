@@ -7,6 +7,7 @@ use std::env;
         .reduce(|accum,item|accum+" "+&item)
         .expect("string is expected");
     let index=string
+        .to_lowercase()
         .split(" ")
         .position(|item|item==word)
         .expect("the word nemo was not found");
